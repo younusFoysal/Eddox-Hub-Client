@@ -3,6 +3,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { TiStar } from "react-icons/ti";
 import useAxiosSecure from "../../hooks/useAxiosSecure.jsx";
 import LoadingSpinner from "../Shared/LoadingSpinner.jsx";
+import {FaSearch} from "react-icons/fa";
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -110,8 +111,8 @@ const Products = () => {
             </div>
 
             <div>
-                <div className="flex flex-row items-center gap-6 py-3 px-4">
-                    <div className="relative max-w-xs">
+                <div className="flex flex-col md:flex-row justify-center items-center mx-auto gap-6 py-3 px-4 w-full">
+                    <div className="relative max-w-xs border-2 rounded-lg border-[#0EA5E9]">
                         <label className="sr-only">Search</label>
                         <input
                             type="text"
@@ -123,21 +124,7 @@ const Products = () => {
                             placeholder="Search by Name"
                         />
                         <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-3">
-                            <svg
-                                className="h-4 w-4 text-gray-400"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            >
-                                <circle cx="11" cy="11" r="8"/>
-                                <path d="m21 21-4.3-4.3"/>
-                            </svg>
+                            <FaSearch />
                         </div>
                     </div>
 
@@ -198,15 +185,15 @@ const Products = () => {
 
 
 
-                    <div className="w-1/4">
-                        <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+                    <div className="w-full md:w-1/4">
+                        <div className="bg-white rounded-lg border-2 border-[#0EA5E9] p-2 w-full max-w-md">
                             <div className="mb-4">
                                 <label htmlFor="price-range" className="block text-gray-700 font-bold mb-2">Price
                                     Range</label>
                                 <input
                                     type="range"
                                     id="price-range"
-                                    className="w-full accent-indigo-600"
+                                    className="w-full accent-[#0EA5E9]"
                                     min={minPrice}
                                     max={maxPrice}
                                     value={selectedPrice}
@@ -237,7 +224,7 @@ const Products = () => {
                     filteredProducts?.map((pdt) => (
                         <div key={pdt._id}
                              className="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
-                            <a className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
+                            <a className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href={`productDetails/${pdt._id}`}>
                                 <img className="object-cover"
                                      src={pdt.image}
                                      alt="product image"/>
@@ -247,7 +234,7 @@ const Products = () => {
                                 </span>
                             </a>
                             <div className="mt-4 px-5 pb-5">
-                                <a href="#">
+                                <a href={`productDetails/${pdt._id}`}>
                                     <h5 className="text-xl tracking-tight text-slate-900">{pdt.name}</h5>
                                 </a>
                                 <div className="mt-2 mb-5 flex items-center justify-between">
@@ -256,13 +243,19 @@ const Products = () => {
                                     </p>
                                     <div className="flex items-center">
                                         <div className="flex">
-                                            <TiStar />
-                                            <TiStar />
-                                            <TiStar />
-                                            <TiStar />
-                                            <TiStar />
+                                            {
+                                                pdt?.ratings && pdt?.ratings > 0 && (
+                                                    <div className="flex items-center">
+                                                        {[...Array(pdt.ratings)].map((_, index) => (
+                                                            <div key={index} className="flex">
+                                                                <TiStar/>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                )
+                                            }
                                         </div>
-                                        <span className="mr-2 ml-3 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">
+                                        <span className="mr-2 ml-3 rounded bg-[#3B8AC9] px-2.5 py-0.5 text-xs text-white font-semibold">
                                             {pdt.ratings}
                                         </span>
                                     </div>
