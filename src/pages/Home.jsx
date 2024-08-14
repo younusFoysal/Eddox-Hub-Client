@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import Banner from "../components/Home/Banner.jsx";
+import Products from "../components/Home/Products.jsx";
 
 
 
@@ -10,6 +11,7 @@ const Home = () => {
                 <title>Eddox Hub | All In One Place</title>
             </Helmet>
             <Banner></Banner>
+            <Products/>
 
         </div>
     )

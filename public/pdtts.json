@@ -1,0 +1,233 @@
+[
+  {
+    "name": "Samsung Galaxy S21",
+    "image": "https://images.samsung.com/is/image/samsung/assets/in/smartphones/galaxy-s21/buy/s21_family_5g_kv_mo_img.jpg",
+    "description": "The Samsung Galaxy S21 features a 6.2-inch AMOLED display, Exynos 2100 chipset, triple camera setup, and a 4000mAh battery. It supports 5G and comes with 128GB storage.",
+    "price": 70000,
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "ratings": 4.5,
+    "date": "15/08/2024",
+    "time": "10:00AM"
+  },
+  {
+    "name": "Sony WH-1000XM4",
+    "image": "https://www.sony.com/image/fe57f6f3f1df75fffc86e017a13d3b49?fmt=pjpeg&bgcolor=FFFFFF&bgc=FFFFFF&wid=2515&hei=1320",
+    "description": "Sony WH-1000XM4 are noise-cancelling over-ear headphones that deliver superior sound quality, 30 hours of battery life, and touch sensor controls.",
+    "price": 30000,
+    "brand": "Sony",
+    "category": "Headphones",
+    "ratings": 4.8,
+    "date": "15/08/2024",
+    "time": "10:05AM"
+  },
+  {
+    "name": "Dell XPS 13",
+    "image": "https://www.dell.com/sites/csimages/Video_Imagery/all/xps-13-laptop-touch.png",
+    "description": "The Dell XPS 13 is a premium ultrabook with a 13.3-inch display, Intel Core i7 processor, 16GB RAM, and 512GB SSD. It offers a thin and light design with long battery life.",
+    "price": 120000,
+    "brand": "Dell",
+    "category": "Laptop",
+    "ratings": 4.7,
+    "date": "15/08/2024",
+    "time": "10:10AM"
+  },
+  {
+    "name": "Nike Air Max 270",
+    "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/c275c8c1-169d-4b9e-89f3-10fcbf7d623b/air-max-270-mens-shoes-KkLcGR.png",
+    "description": "The Nike Air Max 270 features a large Air unit in the heel for superior cushioning, a breathable mesh upper, and a rubber outsole for durability.",
+    "price": 15000,
+    "brand": "Nike",
+    "category": "Shoes",
+    "ratings": 4.6,
+    "date": "15/08/2024",
+    "time": "10:15AM"
+  },
+  {
+    "name": "Apple Watch Series 7",
+    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MKUY3_VW_34FR+watch-44-alum-midnight-nc-7s_VW_34FR_WF_CO_GEO_IN?wid=940&hei=1112&fmt=jpeg&qlt=90&.v=1632171070000",
+    "description": "Apple Watch Series 7 offers a larger, always-on Retina display, faster charging, and advanced health monitoring features including ECG and blood oxygen level measurement.",
+    "price": 45000,
+    "brand": "Apple",
+    "category": "Smartwatch",
+    "ratings": 4.8,
+    "date": "15/08/2024",
+    "time": "10:20AM"
+  },
+  {
+    "name": "JBL Flip 5",
+    "image": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw2c73ab29/pdp/JBL_Flip_5_Hero.png",
+    "description": "The JBL Flip 5 is a portable Bluetooth speaker with powerful sound, 12 hours of playtime, IPX7 waterproof design, and available in multiple colors.",
+    "price": 8000,
+    "brand": "JBL",
+    "category": "Speaker",
+    "ratings": 4.5,
+    "date": "15/08/2024",
+    "time": "10:25AM"
+  },
+  {
+    "name": "Canon EOS 1500D",
+    "image": "https://in.canon/media/image/2020/04/21/1f16e8e7088b4e1cbd04c9f6ffcd3cc8_EOS-1500D.png",
+    "description": "The Canon EOS 1500D is an entry-level DSLR camera with a 24.1MP sensor, DIGIC 4+ processor, Full HD video recording, and built-in Wi-Fi and NFC connectivity.",
+    "price": 40000,
+    "brand": "Canon",
+    "category": "Camera",
+    "ratings": 4.3,
+    "date": "15/08/2024",
+    "time": "10:30AM"
+  },
+  {
+    "name": "Asus ROG Strix G15",
+    "image": "https://dlcdnwebimgs.asus.com/gain/18e8b5a2-c4b8-4192-aec5-209e4ac0bff0/",
+    "description": "The Asus ROG Strix G15 is a gaming laptop with a 15.6-inch FHD display, AMD Ryzen 7 processor, NVIDIA RTX 3060 GPU, 16GB RAM, and 512GB SSD.",
+    "price": 110000,
+    "brand": "Asus",
+    "category": "Gaming Laptop",
+    "ratings": 4.7,
+    "date": "15/08/2024",
+    "time": "10:35AM"
+  },
+  {
+    "name": "Logitech G502 Hero",
+    "image": "https://resource.logitechg.com/w_690,c_limit,q_auto,f_auto,dpr_1.0/content/dam/gaming/en/products/g502-hero/g502-hero-gallery-1.png?v=1",
+    "description": "The Logitech G502 Hero is a high-performance gaming mouse with a 25,600 DPI sensor, customizable weights, and 11 programmable buttons.",
+    "price": 5000,
+    "brand": "Logitech",
+    "category": "Gaming Mouse",
+    "ratings": 4.6,
+    "date": "15/08/2024",
+    "time": "10:40AM"
+  },
+  {
+    "name": "Dyson V11 Absolute Pro",
+    "image": "https://www.dyson.in/medialibrary/Group/Series_Images/Vacuum_Cleaners/V11_Absolute_Pro/KeyVisual1.jpg",
+    "description": "The Dyson V11 Absolute Pro is a powerful cordless vacuum cleaner with advanced filtration, dynamic load sensor, and up to 60 minutes of runtime.",
+    "price": 55000,
+    "brand": "Dyson",
+    "category": "Vacuum Cleaner",
+    "ratings": 4.8,
+    "date": "15/08/2024",
+    "time": "10:45AM"
+  },
+  {
+    "name": "Samsung 55-inch QLED 4K TV",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/in/qe55q60bauxxl/gallery/in-qled-q60b-qe55q60bauxxl-thumb-534024113?$2160_1728_PNG$",
+    "description": "The Samsung 55-inch QLED 4K TV offers stunning picture quality with Quantum Dot technology, 4K resolution, HDR, and smart TV features.",
+    "price": 95000,
+    "brand": "Samsung",
+    "category": "Television",
+    "ratings": 4.7,
+    "date": "15/08/2024",
+    "time": "10:50AM"
+  },
+  {
+    "name": "Instant Pot Duo 7-in-1",
+    "image": "https://m.media-amazon.com/images/I/81lr5NrSl7L._AC_SL1500_.jpg",
+    "description": "The Instant Pot Duo is a 7-in-1 electric pressure cooker that combines a pressure cooker, slow cooker, rice cooker, steamer, sauté pan, yogurt maker, and warmer in one appliance.",
+    "price": 10000,
+    "brand": "Instant Pot",
+    "category": "Kitchen Appliance",
+    "ratings": 4.6,
+    "date": "15/08/2024",
+    "time": "10:55AM"
+  },
+  {
+    "name": "Bose SoundLink Revolve+",
+    "image": "https://static.bose.com/-/media/89f4ea8c07a4456b93fdd39e9b0eb3c9.png",
+    "description": "The Bose SoundLink Revolve+ is a portable Bluetooth speaker offering 360-degree sound, 16-hour battery life, and a durable, water-resistant design.",
+    "price": 25000,
+    "brand": "Bose",
+    "category": "Portable Speaker",
+    "ratings": 4.7,
+    "date": "15/08/2024",
+    "time": "11:00AM"
+  },
+  {
+    "name": "Garmin Forerunner 245",
+    "image": "https://static.garmincdn.com/en/products/010-02120-20/v/cf-lg.jpg",
+    "description": "The Garmin Forerunner 245 is a GPS running smartwatch with advanced running dynamics, music storage, and wellness tracking features.",
+    "price": 32000,
+    "brand": "Garmin",
+    "category": "Smartwatch",
+    "ratings": 4.5,
+    "date": "15/08/2024",
+    "time": "11:05AM"
+  },
+  {
+    "name": "KitchenAid Artisan Stand Mixer",
+    "image": "https://cdn.shopify.com/s/files/1/1701/0735/products/Artisan-KitchenAid-Stand-Mixer-in-Empire-Red-KSM150PSER_2048x.jpg?v=1616598961",
+    "description": "The KitchenAid Artisan Stand Mixer is a versatile kitchen appliance with a 4.8L stainless steel bowl, 10-speed settings, and multiple attachments for various cooking needs.",
+    "price": 35000,
+    "brand": "KitchenAid",
+    "category": "Kitchen Appliance",
+    "ratings": 4.8,
+    "date": "15/08/2024",
+    "time": "11:10AM"
+  },
+  {
+    "name": "Fitbit Charge 5",
+    "image": "https://static.fitbit.com/statics/images/pdp/charge5/charcoal-hero-mobile.png",
+    "description": "The Fitbit Charge 5 is a fitness and health tracker with built-in GPS, stress management tools, sleep tracking, and 7-day battery life.",
+    "price": 15000,
+    "brand": "Fitbit",
+    "category": "Fitness Tracker",
+    "ratings": 4.4,
+    "date": "15/08/2024",
+    "time": "11:15AM"
+  },
+  {
+    "name": "Philips Hue White and Color Ambiance",
+    "image": "https://www2.meethue.com/en-us/white-and-color-ambiance-bridge",
+    "description": "The Philips Hue White and Color Ambiance is a smart lighting system offering millions of colors, voice control, and integration with smart home systems.",
+    "price": 8000,
+    "brand": "Philips",
+    "category": "Smart Lighting",
+    "ratings": 4.7,
+    "date": "15/08/2024",
+    "time": "11:20AM"
+  },
+  {
+    "name": "GoPro HERO9 Black",
+    "image": "https://gopro.com/media/catalog/product/h/e/hero9black-in-hand_2.jpg",
+    "description": "The GoPro HERO9 Black is an action camera with 5K video recording, 20MP photos, HyperSmooth stabilization, and a front-facing display.",
+    "price": 45000,
+    "brand": "GoPro",
+    "category": "Action Camera",
+    "ratings": 4.6,
+    "date": "15/08/2024",
+    "time": "11:25AM"
+  },
+  {
+    "name": "Amazon Echo Dot (4th Gen)",
+    "image": "https://m.media-amazon.com/images/I/714Rq4k05UL._AC_SL1500_.jpg",
+    "description": "The Amazon Echo Dot (4th Gen) is a smart speaker with Alexa, offering voice control, music streaming, smart home integration, and compact design.",
+    "price": 5000,
+    "brand": "Amazon",
+    "category": "Smart Speaker",
+    "ratings": 4.5,
+    "date": "15/08/2024",
+    "time": "11:30AM"
+  },
+  {
+    "name": "Lenovo Yoga Smart Tab",
+    "image": "https://cdn1.smartprix.com/rx-iS7DsmANi-w1200-h1200/lenovo-yoga-smart-tab.jpg",
+    "description": "The Lenovo Yoga Smart Tab is a 10.1-inch tablet with FHD display, Snapdragon 439 processor, dual JBL speakers, and Google Assistant built-in.",
+    "price": 25000,
+    "brand": "Lenovo",
+    "category": "Tablet",
+    "ratings": 4.3,
+    "date": "15/08/2024",
+    "time": "11:35AM"
+  },
+  {
+    "name": "Microsoft Surface Laptop 4",
+    "image": "https://mspoweruser.com/wp-content/uploads/2021/04/Microsoft-Surface-Laptop-4.png",
+    "description": "The Microsoft Surface Laptop 4 offers a 13.5-inch PixelSense display, 11th Gen Intel Core processors, 16GB RAM, and 512GB SSD, combining sleek design with powerful performance.",
+    "price": 135000,
+    "brand": "Microsoft",
+    "category": "Laptop",
+    "ratings": 4.6,
+    "date": "15/08/2024",
+    "time": "11:40AM"
+  }
+]
