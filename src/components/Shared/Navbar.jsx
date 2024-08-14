@@ -43,19 +43,10 @@ const Navbar = () => {
                         <div className=" sm:flex sm:justify-center lg:justify-start p-4">
 
 
-                            {user ? <Link to='/dashboard'>
-                                    <div className="rounded-md shadow">
-                                        <div className="w-full flex items-center justify-center px-4 py-2 text-sm leading-5 font-medium rounded-md text-white bg-green-600 hover:bg-green-700 hover:text-white focus:ring ring-offset-2 ring-green-600 focus:outline-none transition duration-150 ease-in-out md:py-2 md:text-sm md:px-6">
-                                            Dashboard
-                                        </div>
-                                    </div>
-
-                                </Link> :
-                                ""}
-
                             <Link to='/cart'>
                                 <div className="mt-3 sm:mt-0 sm:ml-3">
-                                    <div className="w-full flex items-center justify-center px-4 py-2 text-sm leading-5 font-bold rounded-md text-white bg-[#3B8AC9] hover:bg-blue-200 hover:text-[#3B8AC9] focus:ring ring-offset-2 ring-green-100 focus:outline-none transition duration-150 ease-in-out md:py-2 md:text-sm md:px-6">
+                                    <div
+                                        className="w-full flex items-center justify-center px-4 py-2 text-sm leading-5 font-bold rounded-md text-white bg-[#3B8AC9] hover:bg-blue-200 hover:text-[#3B8AC9] focus:ring ring-offset-2 ring-green-100 focus:outline-none transition duration-150 ease-in-out md:py-2 md:text-sm md:px-6">
                                         Cart
                                     </div>
                                 </div>
@@ -136,10 +127,10 @@ const Navbar = () => {
                                         {user ? (
                                             <>
                                                 <Link
-                                                    to='/dashboard'
+                                                    to='/cart'
                                                     className='block px-4 py-3 hover:bg-neutral-100 transition font-semibold'
                                                 >
-                                                    Dashboard
+                                                    Cart
                                                 </Link>
                                                 <div
                                                     onClick={logOut}
