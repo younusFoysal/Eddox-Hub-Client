@@ -105,7 +105,7 @@ const Products = () => {
 
     return (
         <div>
-            <div className="text-center p-4 mb-4 bg-gradient-to-r from-[#380165] to-[#e21065] text-white shadow-xl shadow-fuchsia-200 px-10">
+            <div className="text-center p-4 mb-4 bg-gradient-to-r from-[#2770ac] to-[#9a159d] text-white shadow-xl shadow-fuchsia-200 px-10">
                 <h1 className="font-bold text-4xl mb-4">All Products</h1>
                 <h1 className="text-3xl">Get Any Products by Filtering.</h1>
             </div>
@@ -261,7 +261,7 @@ const Products = () => {
                                     </div>
                                 </div>
                                 <a href="#"
-                                   className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                                   className="flex items-center justify-center rounded-md bg-[#3B8AC9] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#AA69AB] focus:outline-none focus:ring-4 focus:ring-blue-300">
                                     <FaCartShopping className="mr-2" />
                                     Add to cart
                                 </a>
@@ -271,8 +271,8 @@ const Products = () => {
                 }
             </div>
 
-            <div className="py-1 px-4">
-                <nav className="flex items-center space-x-1">
+            <div className="py-1 px-4 mx-auto">
+                <nav className="flex justify-center items-center space-x-1">
                     <button
                         type="button"
                         onClick={handlePreviousPage}
@@ -304,6 +304,8 @@ const Products = () => {
                     </button>
                 </nav>
             </div>
+
+
         </div>
     );
 };
