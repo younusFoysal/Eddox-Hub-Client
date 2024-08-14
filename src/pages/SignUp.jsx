@@ -201,17 +201,16 @@ const SignUp = () => {
                     <button
                         disabled={loading}
                         onClick={handleGoogleSignIn}
-                        className=" flex items-center gap-2 mt-4 py-2 px-6 bg-blue-500 hover:bg-blue-800 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg cursor-pointer select-none"
+                        className=" flex items-center gap-2 mt-4 py-2 px-6 bg-white hover:bg-blue-800 hover:text-white focus:ring-offset-blue-200 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg cursor-pointer select-none"
                     >
                         {loading ? (
                             <SiSpinrilla className='animate-spin m-auto'/>
                         ) : (<>
                                 <FcGoogle size={32}/>
                                 <p>Continue with Google</p>
-                        </>
+                            </>
 
                         )}
-
 
 
                     </button>
