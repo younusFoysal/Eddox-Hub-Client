@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../../assets/images/logo.png'
+import logo from '/logo.png'
 import {Link} from "react-router-dom";
 
 const Footer = () => {
@@ -13,8 +13,16 @@ const Footer = () => {
                         <div className="min-[1130px]:col-span-5 col-span-1 w-full min-[1130px]:max-w-full mx-auto">
                             <div className="flex flex-col max-sm:items-center gap-2 w-full ">
                                 <Link to="/">
-                                    <div  className="py-1.5 ">
-                                        <img width="150" src={logo} className="duration-500  hover:scale-110 hover:shadow-lg rounded-lg" />
+                                    <div className="py-1.5 flex items-center">
+                                        <img
+                                            width="70"
+                                            src={logo}
+                                            className="duration-500  hover:scale-110 hover:shadow-lg rounded-lg"/>
+
+                                        <h1 className="text-2xl md:text-4xl font-bold text-pretty">
+                                            <span className="text-[#3B8AC9]">Eddox </span>
+                                            <span className="text-[#AA69AB]">Hub </span>
+                                        </h1>
                                     </div>
                                 </Link>
                                 <div className="flex flex-col min-[470px]:flex-row items-center gap-3 w-full">
@@ -31,10 +39,10 @@ const Footer = () => {
                                         </div>
                                         <input type="text" id="default-search"
                                                className="block w-full max-sm:min-w-full sm:max-w-xs pr-4 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none leading-relaxed"
-                                               placeholder="mail@hrhub.com"/>
+                                               placeholder="mail@eddoxhub.com"/>
                                     </div>
                                     <button
-                                        className="py-3 px-7 rounded-lg max-[470px]:w-full text-base font-semibold duration-500 bg-green-700 hover:bg-green-800 text-white transition hover:translate-y-1">
+                                        className="py-3 px-7 rounded-lg max-[470px]:w-full text-base font-semibold duration-500 bg-[#3B8AC9] hover:bg-blue-300 hover:text-blue-900 text-white transition hover:translate-y-1">
                                         Subscribe
                                     </button>
                                 </div>
@@ -43,7 +51,7 @@ const Footer = () => {
                         <div
                             className="min-[1130px]:col-span-7 max-[1130px]:pt-10 lg:pl-14 col-span-1 w-full min-[1130px]:max-w-full mx-auto flex flex-col sm:flex-row justify-between gap-6 ">
                             <div className="">
-                                <h6 className="text-lg font-medium text-gray-900 mb-7 max-sm:text-center border-b-2 border-green-500">Address</h6>
+                                <h6 className="text-lg font-medium text-gray-900 mb-7 max-sm:text-center border-b-2 border-[#3B8AC9]">Address</h6>
                                 <ul className="flex flex-col gap-6">
                                     <li><p href=""
                                            className="text-base font-normal max-sm:text-center  text-gray-600">
@@ -63,20 +71,20 @@ const Footer = () => {
                                 </ul>
                             </div>
                             <div className="">
-                                <h6 className="text-lg font-medium text-gray-900 mb-7 max-sm:text-center border-b-2 border-green-500">Contact</h6>
+                                <h6 className="text-lg font-medium text-gray-900 mb-7 max-sm:text-center border-b-2 border-[#3B8AC9]">Contact</h6>
                                 <ul className="flex flex-col gap-6">
                                     <li><p
                                         className="text-base font-normal max-sm:text-center text-gray-600 whitespace-nowrap">
                                         +91 945 658 3256</p></li>
                                     <li><p
                                         className="text-base font-normal max-sm:text-center text-gray-600 whitespace-nowrap ">
-                                        support@hrhub.com</p>
+                                        support@eddoxhub.com</p>
                                     </li>
 
                                 </ul>
                             </div>
                             <div className="">
-                                <h6 className="text-lg font-medium text-gray-900 mb-7 max-sm:text-center border-b-2 border-green-500">Office</h6>
+                                <h6 className="text-lg font-medium text-gray-900 mb-7 max-sm:text-center border-b-2 border-[#3B8AC9]">Office</h6>
                                 <ul className="flex flex-col gap-6">
                                     <li><p
                                         className="text-base font-normal max-sm:text-center text-gray-600 whitespace-nowrap ">Monday
@@ -92,7 +100,7 @@ const Footer = () => {
                     </div>
                     <div
                         className="flex flex-col-reverse gap-5 md:flex-row items-center first-letter:items-center justify-between pt-7">
-                        <p className="font-normal text-sm text-gray-400">© hrhub.com 2024,
+                        <p className="font-normal text-sm text-gray-400">© eddoxhub.com 2024,
                             All rights reserved.</p>
                         <ul className="flex items-center gap-9">
                             <li><a href=""

@@ -5,7 +5,7 @@ import Home from "../pages/Home.jsx";
 import PrivateRoute from "./PrivateRoute.jsx";
 import Login from "../pages/Login.jsx";
 import SignUp from "../pages/SignUp.jsx";
-import ContactUs from "../components/Home/ContactUS.jsx";
+
 
 
 
@@ -19,14 +19,7 @@ export const router = createBrowserRouter([
                 path: '/',
                 element: <Home />,
             },
-            {
-                path: '/cart',
-                element: <ContactUs />
-            },
-            {
-                path: '/contact-us',
-                element: <ContactUs />
-            },
+
             {
                 path: '/login',
                 element: <Login />

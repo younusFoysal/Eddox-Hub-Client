@@ -3,8 +3,8 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import useAuth from '../../hooks/useAuth'
-import avatarImg from '../../assets/images/placeholder.jpg'
-import logo from '../../assets/images/logo.png'
+import avatarImg from '/placeholder.jpg'
+import logo from '/logo.png'
 import useAxiosSecure from '../../hooks/useAxiosSecure'
 import toast from 'react-hot-toast'
 
@@ -19,16 +19,25 @@ const Navbar = () => {
             <div className='border-b-[1px]'>
                 <Container>
                     <div className='flex flex-row  items-center justify-between gap-3 md:gap-0'>
-                        {/* Logo */}
-                        <Link to='/'>
-                            <img
-                                // className='hidden md:block'
-                                src={logo}
-                                alt='logo'
-                                width='100'
-                                height='100'
-                            />
-                        </Link>
+
+
+                        <div className="flex justify-center items-center gap-2">
+                            {/* Logo */}
+                            <Link to='/'>
+                                <img
+                                    // className='hidden md:block'
+                                    src={logo}
+                                    alt='logo'
+                                    className="w-full h-10"
+                                />
+                            </Link>
+                            <Link to='/'>
+                            <h1 className="text-2xl md:text-3xl font-bold text-pretty">
+                                <span className="text-[#3B8AC9]">Eddox </span>
+                                <span className="text-[#AA69AB]">Hub </span>
+                            </h1>
+                            </Link>
+                        </div>
 
 
                         <div className=" sm:flex sm:justify-center lg:justify-start p-4">
@@ -46,7 +55,7 @@ const Navbar = () => {
 
                             <Link to='/cart'>
                                 <div className="mt-3 sm:mt-0 sm:ml-3">
-                                    <div className="w-full flex items-center justify-center px-4 py-2 text-sm leading-5 font-medium rounded-md text-green-700 dark:text-green-700 bg-green-100 hover:bg-green-50 hover:text-green-600 focus:ring ring-offset-2 ring-green-100 focus:outline-none transition duration-150 ease-in-out md:py-2 md:text-sm md:px-6">
+                                    <div className="w-full flex items-center justify-center px-4 py-2 text-sm leading-5 font-bold rounded-md text-white bg-[#3B8AC9] hover:bg-blue-200 hover:text-[#3B8AC9] focus:ring ring-offset-2 ring-green-100 focus:outline-none transition duration-150 ease-in-out md:py-2 md:text-sm md:px-6">
                                         Cart
                                     </div>
                                 </div>
@@ -55,8 +64,9 @@ const Navbar = () => {
 
                             <Link to='/contact-us'>
                                 <div className="mt-3 sm:mt-0 sm:ml-3">
-                                    <div className="w-full flex items-center justify-center px-4 py-2 text-sm leading-5 font-medium rounded-md text-green-700 dark:text-green-700 bg-green-100 hover:bg-green-50 hover:text-green-600 focus:ring ring-offset-2 ring-green-100 focus:outline-none transition duration-150 ease-in-out md:py-2 md:text-sm md:px-6">
-                                        Contact Us
+                                    <div
+                                        className="w-full flex items-center justify-center px-4 py-2 text-sm leading-5 font-bold rounded-md text-white bg-[#3B8AC9] hover:bg-blue-200 hover:text-[#3B8AC9] focus:ring ring-offset-2 ring-green-100 focus:outline-none transition duration-150 ease-in-out md:py-2 md:text-sm md:px-6">
+                                        Contact
                                     </div>
                                 </div>
                             </Link>
@@ -89,7 +99,7 @@ const Navbar = () => {
                                         <div className="flex flex-col w-full sm:w-auto sm:flex-row p-4">
 
                                             <Link to='/login'>
-                                                <div className="flex flex-row items-center justify-center w-full px-2 py-2 mb-2 text-xs font-bold bg-green-300 leading-5 capitalize duration-100 transform rounded-sm shadow cursor-pointer focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:mb-0 sm:w-auto sm:mr-2 md:px-4 xl:px-6 hover:shadow-lg hover:-translate-y-1">
+                                                <div className="flex flex-row items-center justify-center w-full px-2 py-2 mb-2 text-xs font-bold bg-[#3B8AC9] text-white leading-5 capitalize duration-100 transform rounded-sm shadow cursor-pointer focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:mb-0 sm:w-auto sm:mr-2 md:px-4 xl:px-6 hover:shadow-lg hover:-translate-y-1">
                                                     Login
                                                     <span className="ml-2">
                                                     <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24"
@@ -100,7 +110,7 @@ const Navbar = () => {
                                             </Link>
 
                                             <Link to='/signup'>
-                                                <div className="flex items-center justify-center w-full px-2 py-2 text-xs font-bold leading-5 capitalize duration-100 transform border-2 rounded-sm cursor-pointer border-green-300 focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:w-auto sm:px-4 hover:shadow-lg hover:-translate-y-1">
+                                                <div className="flex items-center justify-center w-full px-2 py-2 text-xs font-bold text-[#3B8AC9] capitalize duration-100 transform border-2 rounded-sm cursor-pointer border-[#3B8AC9] focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:w-auto sm:px-4 hover:shadow-lg hover:-translate-y-1">
                                                     Register
                                                 </div>
                                             </Link>

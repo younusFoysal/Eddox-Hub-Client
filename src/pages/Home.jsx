@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div>
             <Helmet>
-                <title>HR Hub | Because People Matter</title>
+                <title>Eddox Hub | All In One Place</title>
             </Helmet>
             <Banner></Banner>
 
