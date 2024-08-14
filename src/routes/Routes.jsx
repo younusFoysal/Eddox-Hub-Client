@@ -5,6 +5,7 @@ import Home from "../pages/Home.jsx";
 import PrivateRoute from "./PrivateRoute.jsx";
 import Login from "../pages/Login.jsx";
 import SignUp from "../pages/SignUp.jsx";
+import Contact from "../pages/Contact.jsx";
 
 
 
@@ -19,7 +20,10 @@ export const router = createBrowserRouter([
                 path: '/',
                 element: <Home />,
             },
-
+            {
+              path: '/contact',
+              element: <Contact/>
+            },
             {
                 path: '/login',
                 element: <Login />

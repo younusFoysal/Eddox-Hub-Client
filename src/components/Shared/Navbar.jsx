@@ -62,7 +62,7 @@ const Navbar = () => {
                             </Link>
 
 
-                            <Link to='/contact-us'>
+                            <Link to='/contact'>
                                 <div className="mt-3 sm:mt-0 sm:ml-3">
                                     <div
                                         className="w-full flex items-center justify-center px-4 py-2 text-sm leading-5 font-bold rounded-md text-white bg-[#3B8AC9] hover:bg-blue-200 hover:text-[#3B8AC9] focus:ring ring-offset-2 ring-green-100 focus:outline-none transition duration-150 ease-in-out md:py-2 md:text-sm md:px-6">
