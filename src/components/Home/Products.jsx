@@ -5,6 +5,7 @@ import useAxiosSecure from "../../hooks/useAxiosSecure.jsx";
 import LoadingSpinner from "../Shared/LoadingSpinner.jsx";
 import {FaSearch} from "react-icons/fa";
 import useAxiosCommon from "../../hooks/useAxiosCommon.jsx";
+import {CiShoppingTag} from "react-icons/ci";
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -12,7 +13,7 @@ const Products = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [searchQuery, setSearchQuery] = useState('');
-    const itemsPerPage = 10;
+    const itemsPerPage = 12;
     const [brand, setSelectedBrand] = useState("");
     const [category, setSelectedCategory] = useState("");
     const [minPrice, setMinPrice] = useState(0);
@@ -254,10 +255,10 @@ const Products = () => {
                                         </span>
                                     </div>
                                 </div>
-                                <a href="#"
+                                <a href={`productDetails/${pdt._id}`}
                                    className="flex items-center justify-center rounded-md bg-[#3B8AC9] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#AA69AB] focus:outline-none focus:ring-4 focus:ring-blue-300">
-                                    <FaCartShopping className="mr-2" />
-                                    Add to cart
+                                    <CiShoppingTag  className="font-bold text-xl mr-2" />
+                                    View This Item
                                 </a>
                             </div>
                         </div>
