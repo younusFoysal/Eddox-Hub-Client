@@ -18,24 +18,22 @@ const Login = () => {
         signIn,
         loading,
         setLoading,
-        resetPassword,
         saveUser,
-        logOut
     } = useAuth()
     const [email, setEmail] = useState('')
     const axiosCommon = useAxiosCommon();
 
     // Fetch Employees
-    const { data: userL = [], isLoading, refetch } = useQuery({
-        queryKey: ['userIsFired', email],
-        queryFn: async () => {
-            const { data } = await axiosCommon.get(`/user/${email}`);
-            console.log("Email:", email);
-            return data;
-        },
-    });
-
-    console.log("Outside", userL)
+    // const { data: userL = [], isLoading, refetch } = useQuery({
+    //     queryKey: ['userIsFired', email],
+    //     queryFn: async () => {
+    //         const { data } = await axiosCommon.get(`/user/${email}`);
+    //         console.log("Email:", email);
+    //         return data;
+    //     },
+    // });
+    //
+    // console.log("Outside", userL)
 
 
     const handleSubmit = async e => {
@@ -74,15 +72,9 @@ const Login = () => {
             const email = result.user.email
             setEmail(email)
 
-            const { data: refetchedData } = await refetch();
-            console.log("Inside Function:", email, refetchedData);
-
-
 
                 const role = "user"
                 const name = result.user.displayName
-
-
 
                 await saveUser(
                     result.user,
@@ -131,7 +123,7 @@ const Login = () => {
                                     className="border rounded-lg px-3 py-2 mb-5 text-sm w-full outline-none "
                                     type='email'
                                     name='email'
-                                    onBlur={e => setEmail(e.target.value)}
+                                    onChange={e => setEmail(e.target.value)}
                                     id='email'
                                     required
                                     placeholder="user@gmail.com"/>

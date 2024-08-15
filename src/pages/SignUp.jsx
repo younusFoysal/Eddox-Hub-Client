@@ -24,14 +24,14 @@ const SignUp = () => {
     const [email, setEmail] = useState('')
 
     // Fetch Employees
-    const { data: userL = [], isLoading, refetch } = useQuery({
-        queryKey: ['userIsFired', email],
-        queryFn: async () => {
-            const { data } = await axiosCommon.get(`/user/${email}`);
-            console.log("Email:", email);
-            return data;
-        },
-    });
+    // const { data: userL = [], isLoading, refetch } = useQuery({
+    //     queryKey: ['userIsFired', email],
+    //     queryFn: async () => {
+    //         const { data } = await axiosCommon.get(`/user/${email}`);
+    //         console.log("Email:", email);
+    //         return data;
+    //     },
+    // });
 
     const handleSubmit = async e => {
         e.preventDefault()
@@ -97,8 +97,8 @@ const SignUp = () => {
             const email = result.user.email
             setEmail(email)
 
-            const {data: refetchedData} = await refetch();
-            console.log("Inside Function:", email, refetchedData);
+            //const {data: refetchedData} = await refetch();
+            //console.log("Inside Function:", email, refetchedData);
 
 
 

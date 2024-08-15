@@ -4,6 +4,7 @@ import { TiStar } from "react-icons/ti";
 import useAxiosSecure from "../../hooks/useAxiosSecure.jsx";
 import LoadingSpinner from "../Shared/LoadingSpinner.jsx";
 import {FaSearch} from "react-icons/fa";
+import useAxiosCommon from "../../hooks/useAxiosCommon.jsx";
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -11,7 +12,6 @@ const Products = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [searchQuery, setSearchQuery] = useState('');
-    const axiosSecure = useAxiosSecure();
     const itemsPerPage = 10;
     const [brand, setSelectedBrand] = useState("");
     const [category, setSelectedCategory] = useState("");
@@ -21,12 +21,13 @@ const Products = () => {
     const [priceSort, setPriceSort] = useState('asc');
     const [dateSort, setDateSort] = useState('desc');
     const [loading, setLoading] = useState(false);
+    const axiosCommon = useAxiosCommon();
 
     useEffect(() => {
         const fetchProducts = async () => {
             setLoading(true);
             try {
-                const response = await axiosSecure.get(`/products?page=${currentPage}&limit=${itemsPerPage}&brand=${brand}&searchQuery=${searchQuery}&category=${category}&minPrice=${minPrice}&maxPrice=${selectedPrice}&priceSort=${priceSort}&dateSort=${dateSort}`);
+                const response = await axiosCommon.get(`/products?page=${currentPage}&limit=${itemsPerPage}&brand=${brand}&searchQuery=${searchQuery}&category=${category}&minPrice=${minPrice}&maxPrice=${selectedPrice}&priceSort=${priceSort}&dateSort=${dateSort}`);
                 setProducts(response?.data?.products);
                 setTotalPages(response?.data?.totalPages);
             } catch (error) {
@@ -44,7 +45,7 @@ const Products = () => {
         const fetchAllProducts = async () => {
             setLoading(true);
             try {
-                const response = await axiosSecure.get(`/products`);
+                const response = await axiosCommon.get(`/products`);
                 setAllProducts(response?.data?.products);
             } catch (error) {
                 console.error('Error fetching products:', error);
@@ -84,13 +85,6 @@ const Products = () => {
         setSelectedCategory(event.target.value);
     };
 
-    const handleMinPriceChange = (event) => {
-        setMinPrice(event.target.value);
-    };
-
-    const handleMaxPriceChange = (event) => {
-        setMaxPrice(event.target.value);
-    };
 
     const handlePriceSortChange = (event) => {
         setPriceSort(event.target.value);

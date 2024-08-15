@@ -10,6 +10,7 @@ import {FaCartShopping} from "react-icons/fa6";
 const ProductDetails = () => {
 
     const { user, logOut } = useAuth()
+    console.log(user)
     const navigate = useNavigate();
     const queryClient = useQueryClient();
     const { id } = useParams();
@@ -18,13 +19,14 @@ const ProductDetails = () => {
     const [seletedImage, setSelectedImage] = useState('');
 
 
+
     // Fetch reviews Data
     const {
         data: pdt = [],
         isLoading,
         refetch,
     } = useQuery({
-        queryKey: ['reviews'],
+        queryKey: ['product'],
         queryFn: async () => {
             const { data } = await axiosSecure.get(`/product/${id}`);
             setSelectedImage(data?.image)
