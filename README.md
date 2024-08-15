@@ -3,7 +3,7 @@
 
 
 <p align="center">
-  <img src="/public/eddoxHub.png" alt="Hr Hub Pro">
+  <img src="public/eddoxHub.png" alt="Hr Hub Pro">
 </p>
 <br>
 
