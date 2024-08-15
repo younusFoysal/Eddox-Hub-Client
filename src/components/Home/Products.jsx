@@ -99,7 +99,7 @@ const Products = () => {
 
 
     return (
-        <div>
+        <div id="products">
             <div className="text-center p-4 mb-4 bg-gradient-to-r from-[#2770ac] to-[#9a159d] text-white shadow-xl shadow-fuchsia-200 px-10">
                 <h1 className="font-bold text-4xl mb-4">All Products</h1>
                 <h1 className="text-3xl">Get Any Products by Filtering.</h1>
