@@ -107,7 +107,8 @@ const Products = () => {
 
     return (
         <div id="products">
-            <div className="text-center p-4 mb-4 bg-gradient-to-r from-[#2770ac] to-[#9a159d] text-white shadow-xl shadow-fuchsia-200 px-10">
+            <div
+                className="text-center p-4 mb-4 bg-gradient-to-r from-[#2770ac] to-[#9a159d] text-white shadow-xl shadow-fuchsia-200 px-10">
                 <h1 className="font-bold text-4xl mb-4">All Products</h1>
                 <h1 className="text-3xl">Get Any Products by Filtering.</h1>
             </div>
@@ -126,7 +127,7 @@ const Products = () => {
                             placeholder="Search by Name"
                         />
                         <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-3">
-                            <FaSearch />
+                            <FaSearch/>
                         </div>
                     </div>
 
@@ -185,8 +186,6 @@ const Products = () => {
                     </label>
 
 
-
-
                     <div className="w-full md:w-1/4">
                         <div className="bg-white rounded-lg border-2 border-[#0EA5E9] p-2 w-full max-w-md">
                             <div className="mb-4">
@@ -221,83 +220,86 @@ const Products = () => {
             </div>
 
             <div
-                className="grid grid-cols-1 items-center mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-2 p-2 w-full md:px-20">
-                {
-                    filteredProducts?.map((pdt) => (
-                        <div key={pdt._id}
-                             className="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg bg-white shadow-xl hover:shadow-blue-100 duration-500 hover:scale-105">
-                            <a className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl " href={`productDetails/${pdt._id}`}>
-                                <img className="object-cover"
-                                     src={pdt.image}
-                                     alt="product image"/>
-                                <span
-                                    className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">
-                                    30% OFF
-                                </span>
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 p-4 w-full max-w-screen-xl mx-auto">
+                {filteredProducts?.map((pdt) => (
+                    <div
+                        key={pdt._id}
+                        className="relative flex flex-col overflow-hidden border rounded-lg bg-white shadow-xl hover:shadow-blue-100 duration-500 hover:scale-105">
+
+                        <a
+                            className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl"
+                            href={`productDetails/${pdt._id}`}>
+                            <img
+                                className="object-cover h-full mx-auto"
+                                src={pdt.image}
+                                alt="product image"/>
+                            <span
+                                className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">
+          30% OFF
+        </span>
+                        </a>
+
+                        <div className="mt-4 px-5 pb-5">
+                            <a href={`productDetails/${pdt._id}`}>
+                                <h5 className="text-xl font-bold tracking-normal text-slate-900">{pdt.name}</h5>
                             </a>
-                            <div className="mt-4 px-5 pb-5">
-                                <a href={`productDetails/${pdt._id}`}>
-                                    <h5 className="text-xl font-bold tracking-normal text-slate-900">{pdt.name}</h5>
-                                </a>
+                            <h5>
+                                {truncateDescription(pdt.description, 10)}
+                            </h5>
+                            <br/>
+
+                            <div className="flex justify-between">
                                 <h5>
-                                    {truncateDescription(pdt.description, 10)}
+                                    <span className="font-semibold text-black">Brand:</span> {pdt.brand}
                                 </h5>
-                                <br/>
-
-                                <div className="flex justify-between">
-                                    <h5>
-                                        <span className="font-semibold text-black">Brand:</span> {pdt.brand}
-                                    </h5>
-                                    <h5>
-                                        <span className="font-semibold text-black">Category:</span> {pdt.category}
-                                    </h5>
-                                </div>
-
-
-                                <div className="flex justify-between">
-                                    <h5>
-                                        <span className="font-semibold text-black">Date:</span> {pdt.date}
-                                    </h5>
-                                    <h5>
-                                        <span className="font-semibold text-black">Time:</span> {pdt.time}
-                                    </h5>
-                                </div>
-
-
-                                <div className="mt-2 mb-5 flex items-center justify-between">
-                                    <p>
-                                        <span className="text-3xl font-bold text-slate-900">${pdt.price}</span>
-                                    </p>
-                                    <div className="flex items-center">
-                                        <div className="flex">
-                                            {
-                                                pdt?.ratings && pdt?.ratings > 0 && (
-                                                    <div className="flex items-center">
-                                                        {[...Array(pdt.ratings)].map((_, index) => (
-                                                            <div key={index} className="flex">
-                                                                <TiStar/>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                )
-                                            }
-                                        </div>
-                                        <span
-                                            className="mr-2 ml-3 rounded bg-[#3B8AC9] px-2.5 py-0.5 text-xs text-white font-semibold">
-                                            {pdt.ratings}
-                                        </span>
-                                    </div>
-                                </div>
-                                <a href={`productDetails/${pdt._id}`}
-                                   className="flex shadow-lg items-center justify-center rounded-md bg-[#3B8AC9] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#AA69AB] focus:outline-none focus:ring-4 focus:ring-blue-300">
-                                    <CiShoppingTag className="font-bold text-xl mr-2"/>
-                                    View This Item
-                                </a>
+                                <h5>
+                                    <span className="font-semibold text-black">Category:</span> {pdt.category}
+                                </h5>
                             </div>
+
+                            <div className="flex justify-between">
+                                <h5>
+                                    <span className="font-semibold text-black">Date:</span> {pdt.date}
+                                </h5>
+                                <h5>
+                                    <span className="font-semibold text-black">Time:</span> {pdt.time}
+                                </h5>
+                            </div>
+
+                            <div className="mt-2 mb-5 flex items-center justify-between">
+                                <p>
+                                    <span className="text-3xl font-bold text-slate-900">${pdt.price}</span>
+                                </p>
+                                <div className="flex items-center">
+                                    <div className="flex">
+                                        {pdt?.ratings && pdt?.ratings > 0 && (
+                                            <div className="flex items-center">
+                                                {[...Array(pdt.ratings)].map((_, index) => (
+                                                    <div key={index} className="flex">
+                                                        <TiStar/>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                    <span
+                                        className="mr-2 ml-3 rounded bg-[#3B8AC9] px-2.5 py-0.5 text-xs text-white font-semibold">
+              {pdt.ratings}
+            </span>
+                                </div>
+                            </div>
+
+                            <a
+                                href={`productDetails/${pdt._id}`}
+                                className="flex shadow-lg items-center justify-center rounded-md bg-[#3B8AC9] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#AA69AB] focus:outline-none focus:ring-4 focus:ring-blue-300">
+                                <CiShoppingTag className="font-bold text-xl mr-2"/>
+                                View This Item
+                            </a>
                         </div>
-                    ))
-                }
+                    </div>
+                ))}
             </div>
+
 
             <div className="py-1 px-4 mx-auto">
                 <nav className="flex justify-center items-center space-x-1">
@@ -310,7 +312,7 @@ const Products = () => {
                         <span aria-hidden="true">«</span>
                         <span className="sr-only">Previous</span>
                     </button>
-                    {Array.from({ length: totalPages }, (_, index) => (
+                    {Array.from({length: totalPages}, (_, index) => (
                         <button
                             key={index}
                             type="button"
