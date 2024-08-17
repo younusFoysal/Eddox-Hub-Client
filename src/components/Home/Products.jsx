@@ -95,6 +95,13 @@ const Products = () => {
         setDateSort(event.target.value);
     }
 
+    const truncateDescription = (description, wordLimit) => {
+        const words = description.split(" ");
+        return words.length > wordLimit
+            ? words.slice(0, wordLimit).join(" ") + "..."
+            : description;
+    }
+
     const filteredProducts = products.filter(pdt => pdt.price >= minPrice && pdt.price <= selectedPrice);
 
 
@@ -214,12 +221,12 @@ const Products = () => {
             </div>
 
             <div
-                className="grid grid-cols-1 items-center mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-4 p-2 w-full md:px-20">
+                className="grid grid-cols-1 items-center mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-2 p-2 w-full md:px-20">
                 {
                     filteredProducts?.map((pdt) => (
                         <div key={pdt._id}
-                             className="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
-                            <a className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href={`productDetails/${pdt._id}`}>
+                             className="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg bg-white shadow-xl hover:shadow-blue-100 duration-500 hover:scale-105">
+                            <a className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl " href={`productDetails/${pdt._id}`}>
                                 <img className="object-cover"
                                      src={pdt.image}
                                      alt="product image"/>
@@ -230,8 +237,33 @@ const Products = () => {
                             </a>
                             <div className="mt-4 px-5 pb-5">
                                 <a href={`productDetails/${pdt._id}`}>
-                                    <h5 className="text-xl tracking-tight text-slate-900">{pdt.name}</h5>
+                                    <h5 className="text-xl font-bold tracking-normal text-slate-900">{pdt.name}</h5>
                                 </a>
+                                <h5>
+                                    {truncateDescription(pdt.description, 10)}
+                                </h5>
+                                <br/>
+
+                                <div className="flex justify-between">
+                                    <h5>
+                                        <span className="font-semibold text-black">Brand:</span> {pdt.brand}
+                                    </h5>
+                                    <h5>
+                                        <span className="font-semibold text-black">Category:</span> {pdt.category}
+                                    </h5>
+                                </div>
+
+
+                                <div className="flex justify-between">
+                                    <h5>
+                                        <span className="font-semibold text-black">Date:</span> {pdt.date}
+                                    </h5>
+                                    <h5>
+                                        <span className="font-semibold text-black">Time:</span> {pdt.time}
+                                    </h5>
+                                </div>
+
+
                                 <div className="mt-2 mb-5 flex items-center justify-between">
                                     <p>
                                         <span className="text-3xl font-bold text-slate-900">${pdt.price}</span>
@@ -250,14 +282,15 @@ const Products = () => {
                                                 )
                                             }
                                         </div>
-                                        <span className="mr-2 ml-3 rounded bg-[#3B8AC9] px-2.5 py-0.5 text-xs text-white font-semibold">
+                                        <span
+                                            className="mr-2 ml-3 rounded bg-[#3B8AC9] px-2.5 py-0.5 text-xs text-white font-semibold">
                                             {pdt.ratings}
                                         </span>
                                     </div>
                                 </div>
                                 <a href={`productDetails/${pdt._id}`}
-                                   className="flex items-center justify-center rounded-md bg-[#3B8AC9] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#AA69AB] focus:outline-none focus:ring-4 focus:ring-blue-300">
-                                    <CiShoppingTag  className="font-bold text-xl mr-2" />
+                                   className="flex shadow-lg items-center justify-center rounded-md bg-[#3B8AC9] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#AA69AB] focus:outline-none focus:ring-4 focus:ring-blue-300">
+                                    <CiShoppingTag className="font-bold text-xl mr-2"/>
                                     View This Item
                                 </a>
                             </div>
